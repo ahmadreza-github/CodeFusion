@@ -1,0 +1,9 @@
+done to get the result and save them and exit the program
+
+"<" : to take a step (index) back and alternate it with the another value
+
+result : to get the result but the program continues to run
+
+"*": to refuse entering a value, (skipped) will be shown as a result
+
+00 : have an unlimited ending number.

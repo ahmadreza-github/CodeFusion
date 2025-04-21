@@ -1,0 +1,31 @@
+the central problem in machine learning and deep learning is to meaningfully
+transform data
+
+searching for useful representations
+and rules over some input data, within a predefined space of possibilities, using guidance from a feedback signal.
+
+
+For our purposes, deep learning is a mathematical framework for learning representations from data.
+
+"learning representations from data" means finding ways to encode information in a manner that facilitates learning and decision-making by AI systems. 
+
+
+the key area where AI stumbles is the ability to make connections between seeminly unconnected things in order to generate creative thoughts.
+
+# input = independent value
+# output = dependent value 
+__________________________________________________________________
+False negative: the result is True but the Prediction is False
+False positive: the result is False but the Prediction is True
+ 
+True negative: the result is False and the Prediction is False 
+True positive: the result is True and the Prediction is True
+__________________________________________________________________
+metrics(معیار اندازه گیری)
+1-accuracy: all correct recoginses added together devided by all recoginses. it informs us how a model is doing well(generally)
+
+2-recall: to what extent are "True positives" really positive?. it informs us about the accuracy of "TURE POSITIVES" and how many percent of them is really true positive. it is useful when the value of (False positive) is high.
+
+3-percision: to what extent are "True positives" really positive?(email spam)
+__________________________________________________________________
+ 

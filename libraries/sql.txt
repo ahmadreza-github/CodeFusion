@@ -1,0 +1,138 @@
+CRUD = create , read , update , delete.
+(DTMS): database mnagement system
+primary key: an attribute name that uniquely identifies the row in database
+surrogate key: these keys are of no business with real world, attarched just for database
+natural key: these keys are related to real world use like a ssn number
+foreign key: a way we can define the relationship between the two tables
+(DQL) data query language: to query the database for info, get info that is already exist.
+(DDL) data definition language: to define database schemas
+(DCL) data control language: control access to data in the database, permission management.
+(DML) data manipulation language: insert, update and delete data from the database.
+create database Newdatabase;
+main datatypes:
+INT , DECIMAL (M , N) , 
+ARCHAR(I) variable character: string of text length 1
+BLOB: binary large object: storing large data.
+date
+timestamp: used for recording
+commands and code: 
+create a table:
+
+CREATE TABLE table_name(
+    table id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    primary KEY (major)
+
+
+
+    
+);
+delete a table:
+DROP TABLE table_name;
+
+modify a table: 
+ALTER TABLE student citizenship_nu DECIMAL(3 , 2)
+
+PRAGMA table_info(TABLE_name); to show you a table
+
+ALTER TABLE student DROP COLUMN (table_name); delete a row
+
+ALTER TABLE student ADD citizenship_number DECIMAL(3,2 );
+
+INSERT INTO table_name VALUES (1 , 'mohammad' , 20) # consider that the count of value you pass to table must be equal to the count of value in the table.
+** to read added info by above code: SELECT * FROM table_name.
+
+in case you don't want to include some info and let them stay Nul:
+INSERT INTO table_name(column name , column name) VALUES (add info , add info)
+
+CREATE TABLE no_name(
+	id_number INT UNIQUE,         (unique) means: repeated value is forbidden for this row.
+	name varchar(20) NOT NULL,    (NOTT NULL) means: can't stay empty when inserting info.
+   major VARCHAR (20) default, 'undecided'  (default) means: if the value is left empty, something will be replaced as you intend, 'undecided' in this case
+   table_number INT AUTO_INCREMENT,         (AUTO_INCREMENT) means: you don't have to insert the value all the time, everytime the valus is inserted, it increases
+);
+
+
+INSERT INTO table_name VALUES (- , - , - , NULL , -) #adding a null info
+
+
+a primary key is both NOT NULL and UNIQUE....
+
+CREATE TABLE company(
+    student_id INTEGER PRIMARY KEY, (INTEGER PRIMARY KEY) means it is AUTO_INCREMENT
+    name varchar(20), 
+    major varchar(20)
+);
+
+<> : not equals or (!=) in python.
+
+updating database:
+UPDATE worktable 
+SET major = 'computer science'
+WHERE major = 'sc';
+or:
+UPDATE worktable
+SET major = 'society'
+WHERE id_number = 2;
+or:
+UPDATE worktable
+SET major = 'computer society'
+WHERE major = 'computer science' OR major = 'society';
+or:
+UPDATE worktable
+SET name = 'seiko' , major = 'chemistry'
+WHERE id_number = 5;
+or:
+UPDATE table_name
+SET major = "undecided" : all values that were set for: "major" will change to :"undecided"
+
+delete rows (now a table):
+DELETE FROM worktable; #ALL ROWS would be deleted IN "worktable"
+or:
+DELETE FROM worktable
+WHERE name = 'Zack' AND major = 'literature';
+or:
+SELECT name , major
+FROM worktable;
+
+or:
+SELECT worktable.major , worktable.name 
+FROM worktable;
+
+# ORDER BY statement:
+SELECT *
+FROM worktable 
+ORDER BY id_number DESC;  #put the TABLE in order based on alphabet or numbers
+                          # you can use DESC or ASC
+
+limitation:
+SELECT * 
+FROM worktable
+LIMIT (3);  #putting a limitation for values you get.
+
+
+sample code:
+SELECT major , name
+FROM worktable 
+WHERE major = 'biology' 
+ORDER BY id_number asc 
+LIMIT(2);
+
+logical operations in sql: -- , <  , >  , <> , and , or , = 
+
+IN statement:
+SELECT name , id_number
+FROM worktable
+WHERE name IN ('Zack' , 'seiko');
+
+
+
+
+
+
+
+
+
+
+
